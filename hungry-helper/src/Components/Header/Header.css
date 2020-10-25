@@ -1,0 +1,19 @@
+.header {
+    margin: 0 auto;
+    padding: 12px;
+    background-color: antiquewhite;
+    background-image: url('/src/images/wood-plank.jpg');
+    background-size: cover;
+}
+
+.title {
+    text-align: justify;
+    text-shadow: -2px 3px black;
+    width: 60px;
+    font-size: 48px;
+    font-weight: 800;
+    color: white;
+}
+body {
+    background-color: blanchedalmond;
+}
