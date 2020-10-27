@@ -1,25 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-const Recipe = () => {
-    const [recipe, setRecipe] = useState();
-    const apiKey = process.env.REACT_APP_STOCK_API_KEY
-	const url = `https://www.themealdb.com/api/json/v1/${apiKey}/search.php?f=c`;
+const Recipe = ({ recipe }) => {
 
-    useEffect(() => {
-        fetch(url)
-            .then((res) => res.json())
-            .then((resJson) => {
-               setRecipe(resJson)
-               console.log(resJson)
-            })
-            .catch(error => {
-                console.error(error)
-            })
-    }, [])
 
-	return <div>   
-        <h2>Recipe Item: {}</h2>
-    </div>;
+	console.log(recipe.strMeal);
+    if(recipe === null) {
+        return null
+    } else
+	return (
+		<div className='recipe-div'>
+			<h2>Recipe name:</h2>
+		</div>
+	);
 };
 
 export default Recipe;
