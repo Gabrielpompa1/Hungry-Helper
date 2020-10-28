@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Recipe.css';
 
 const Recipe = () => {
 	const [recipe, setRecipe] = useState('');
@@ -23,11 +24,28 @@ const Recipe = () => {
 
 	return (
 		<div className='recipe-div'>
-			<img src={recipe.strMealThumb} alt='' />
-			<h2>Recipe name: {recipe.strMeal}</h2>
-			<h3>Category: {recipe.strCategory}</h3>
+			{/* Header */}
+			<header className='recipe-header'>
+				<h1>{recipe.strMeal}</h1>
+			</header>
+			{/* End of Header */}
+
+			{/* Image */}
+			<div className='image-div'>
+				<img id='recipe-image' src={recipe.strMealThumb} alt={recipe.strMeal} />
+			</div>
+			{/* End of Image */}
+
+			{/* Description */}
+			<div className='description-div'>
+				<h3>Category: {recipe.strCategory}</h3>
+				<h3>Area: {recipe.strArea}</h3>
+			</div>
+			{/* End of Description */}
+
+			{/* Ingredients */}
 			<div className='ingredients-div'>
-				<h2>Required Ingredients:</h2>
+				<h2 className='ingredients-title'>Required Ingredients</h2>
 				<ul>
 					<li>
 						{recipe.strMeasure1} {recipe.strIngredient1}
@@ -90,13 +108,22 @@ const Recipe = () => {
 						{recipe.strMeasure20} {recipe.strIngredient20}
 					</li>
 				</ul>
-				<div className='instructions-div'>
-					<h2>Measurements:</h2>
-					<ul>
-						<li></li>
-					</ul>
-				</div>
 			</div>
+			{/* End of Ingredients */}
+
+			{/* Instructions */}
+			<div className='instructions-div'>
+				<h2>Instructions</h2>
+				<p>{recipe.strInstructions}</p>
+			</div>
+			{/* End of Instructions */}
+
+			{/* Information */}
+			<div className='information-div'>
+				<h2>For more information.</h2>
+				<p>{recipe.strSource}</p>
+			</div>
+			{/* End of Information */}
 		</div>
 	);
 };
