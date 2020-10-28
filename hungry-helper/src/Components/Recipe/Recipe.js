@@ -115,13 +115,15 @@ const Recipe = () => {
 			<div className='instructions-div'>
 				<h2>Instructions</h2>
 				<p>{recipe.strInstructions}</p>
+				<h4>Video Tutorial</h4>
+				<p>{recipe.strYoutube}</p>
 			</div>
 			{/* End of Instructions */}
 
 			{/* Information */}
 			<div className='information-div'>
 				<h2>For more information.</h2>
-				<p>{recipe.strSource}</p>
+				<p className='source-p'>{recipe.strSource}</p>
 			</div>
 			{/* End of Information */}
 		</div>

@@ -47,3 +47,7 @@ li {
 .information-div {
     border-top: 2px solid black;
 }
+
+.source-p {
+    max-width: 170px;
+}
