@@ -28,10 +28,10 @@ nav {
 
 header li {
     color: white;
-    list-style: none;
     font-weight: bold;
     font-size: 16px;
     text-decoration: none;
+    list-style: none;
 }
 
 body {
