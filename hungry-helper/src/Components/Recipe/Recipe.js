@@ -1,26 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Recipe.css';
 
-const Recipe = () => {
-	const [recipe, setRecipe] = useState('');
-	const apiKey = process.env.REACT_APP_STOCK_API_KEY;
-
-	// Random Recipe
-	const url = `https://www.themealdb.com/api/json/v1/${apiKey}/random.php`;
-
-	// Search recipe by letter
-	// const url = `https://www.themealdb.com/api/json/v1/${apiKey}/search.php?f=c`;
-
-	useEffect(() => {
-		fetch(url)
-			.then((res) => res.json())
-			.then((resJson) => {
-				setRecipe(resJson.meals[0]);
-			})
-			.catch((error) => {
-				console.error(error);
-			});
-	}, []);
+const Recipe = ({ recipe }) => {
+	
 
 	return (
 		<div className='recipe-div'>
