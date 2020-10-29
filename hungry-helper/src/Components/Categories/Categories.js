@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Category = () => {
-	const [category, setCategories] = useState([]);
+	const [category, setCategories] = useState('');
 
 	const apiKey = process.env.REACT_APP_STOCK_API_KEY;
 	// List all Categories
@@ -17,9 +17,11 @@ const Category = () => {
 			.catch((error) => {
 				console.error(error);
 			});
-    }, []);
+	}, []);
 
-    
+	if (!category) {
+		return null;
+	}
 	return (
 		<div>
 			<h2>Choose a category to get started!</h2>
@@ -35,7 +37,6 @@ const Category = () => {
 				<li>{category[8].strCategory}</li>
 				<li>{category[9].strCategory}</li>
 				<li>{category[10].strCategory}</li>
-				<li>{category[11].strCategory}</li>
 				<li>{category[11].strCategory}</li>
 				<li>{category[12].strCategory}</li>
 				<li>{category[13].strCategory}</li>
