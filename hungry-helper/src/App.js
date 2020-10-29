@@ -22,7 +22,7 @@ const App = () => {
 			.then((res) => res.json())
 			.then((resJson) => {
 				setRecipe(resJson.meals[0]);
-				console.log(resJson)
+
 			})
 			.catch((error) => {
 				console.error(error);

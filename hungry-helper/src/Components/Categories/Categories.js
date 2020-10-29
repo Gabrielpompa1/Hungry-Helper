@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import Category from '../Category/Category'
 
-const Category = () => {
+const Categories = () => {
 	const [category, setCategories] = useState('');
 
 	const apiKey = process.env.REACT_APP_STOCK_API_KEY;
@@ -12,7 +13,6 @@ const Category = () => {
 			.then((res) => res.json())
 			.then((resJson) => {
 				setCategories(resJson.categories);
-				console.log(category);
 			})
 			.catch((error) => {
 				console.error(error);
@@ -41,8 +41,9 @@ const Category = () => {
 				<li>{category[12].strCategory}</li>
 				<li>{category[13].strCategory}</li>
 			</ul>
+            <Category />
 		</div>
 	);
 };
 
-export default Category;
+export default Categories;
