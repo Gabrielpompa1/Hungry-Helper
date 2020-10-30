@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const Category = () => {
 	const [listItem, setListItem] = useState('');
 	const apiKey = process.env.REACT_APP_STOCK_API_KEY;
-	const catListUrl = `https://www.themealdb.com/api/json/v1/${apiKey}/filter.php?c=Beef`;
+	const catListUrl = `https://www.themealdb.com/api/json/v1/${apiKey}/filter.php?c=Lamb`;
 
 	useEffect(() => {
 		fetch(catListUrl)

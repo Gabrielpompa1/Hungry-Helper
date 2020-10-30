@@ -5,6 +5,8 @@ import Header from './Components/Header/Header';
 import Recipe from './Components/Recipe/Recipe';
 import Categories from './Components/Categories/Categories';
 import Category from './Components/Category/Category';
+import RecipeInfo from './Components/RecipeInfo/RecipeInfo'
+import Footer from './Components/Footer/Footer'
 
 const App = () => {
 	return (
@@ -35,7 +37,11 @@ const App = () => {
 						match={routerProps.match} />
 					)
 				}} />
+				<Route path='/test' component={RecipeInfo}/>
 			</main>
+				{/* <footer>
+					{/* <Footer /> */}
+				{/* </footer> */}
 		</div>
 	);
 };
