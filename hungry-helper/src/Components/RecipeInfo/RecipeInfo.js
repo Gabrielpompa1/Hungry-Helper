@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './RecipeInfo.css';
 
-const RecipeInfo = () => {
+const RecipeInfo = ({ match }) => {
 	const [specRecipe, setSpecRecipe] = useState('');
 	const apiKey = process.env.REACT_APP_STOCK_API_KEY;
-	const recUrl = `https://www.themealdb.com/api/json/v1/${apiKey}/lookup.php?i=52874`;
+	const recUrl = `https://www.themealdb.com/api/json/v1/${apiKey}/lookup.php?i=${match.params.id}`;
 
 	useEffect(() => {
+		console.log(match)
 		fetch(recUrl)
 			.then((res) => res.json())
 			.then((resJson) => {
 				setSpecRecipe(resJson.meals[0]);
-				console.log(resJson)
+				console.log(resJson);
 			})
 			.catch((error) => {
 				console.error(error);

@@ -5,9 +5,9 @@ import Header from './Components/Header/Header';
 import Recipe from './Components/Recipe/Recipe';
 import Categories from './Components/Categories/Categories';
 import Category from './Components/Category/Category';
-import RecipeInfo from './Components/RecipeInfo/RecipeInfo'
-import Footer from './Components/Footer/Footer'
-import './App.css'
+import RecipeInfo from './Components/RecipeInfo/RecipeInfo';
+import Footer from './Components/Footer/Footer';
+import './App.css';
 
 const App = () => {
 	return (
@@ -38,7 +38,12 @@ const App = () => {
 						return <Category match={routerProps.match} />;
 					}}
 				/>
-				<Route path='/test' component={RecipeInfo} />
+				<Route
+					path='/recipe/:id'
+					render={(routerProps) => {
+						return <RecipeInfo match={routerProps.match} />;
+					}}
+				/>
 			</main>
 			{/* <footer>
 					{/* <Footer /> */}

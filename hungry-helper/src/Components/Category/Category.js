@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Category.css'
+import { Link } from 'react-router-dom';
+import './Category.css';
 
 const Category = ({ match }) => {
 	const [listItem, setListItem] = useState('');
@@ -7,7 +8,6 @@ const Category = ({ match }) => {
 	const catListUrl = `https://www.themealdb.com/api/json/v1/${apiKey}/filter.php?c=${match.params.id}`;
 
 	useEffect(() => {
-		console.log(match)
 		fetch(catListUrl)
 			.then((res) => res.json())
 			.then((resJson) => {
@@ -24,11 +24,17 @@ const Category = ({ match }) => {
 	}
 
 	let list = listItem.map((item) => {
-		return <li className='list-items' key={item.idMeal}>{item.strMeal}</li>;
+		return (
+			<Link key={item.idMeal} to={`/recipe/${item.idMeal}`}>
+				<li className='list-items' key={item.idMeal}>
+					{item.strMeal}
+				</li>
+			</Link>
+		);
 	});
 	return (
 		<div>
-            <h2>Pick a recipe!</h2>
+			<h2>Pick a recipe!</h2>
 			<ul>{list}</ul>
 		</div>
 	);

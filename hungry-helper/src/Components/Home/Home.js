@@ -15,7 +15,7 @@ const Home = () => {
                 </div>
                 <div className='how'>
                     <h3>How does it work?</h3>
-                    <p>Hungry Helper pull datat from a third party API, which contains a vast list of information on cooking recipes.</p>
+                    <p>Hungry Helper pulls data from a third party API, which contains a vast list of information on cooking recipes.</p>
                 </div>
                 <div className='get-started'>
                     <h3>How do I get started?</h3>
