@@ -7,6 +7,7 @@ import Categories from './Components/Categories/Categories';
 import Category from './Components/Category/Category';
 import RecipeInfo from './Components/RecipeInfo/RecipeInfo'
 import Footer from './Components/Footer/Footer'
+import './App.css'
 
 const App = () => {
 	return (
@@ -15,14 +16,14 @@ const App = () => {
 				<Header />
 				<nav>
 					<ul className='nav-ul'>
-						<Link to='/'>
-							<li>Home</li>
+						<Link className='link' to='/'>
+							<li className='li'>Home</li>
 						</Link>
-						<Link to='/random'>
-							<li>Random</li>
+						<Link className='link' to='/random'>
+							<li className='li'>Random</li>
 						</Link>
-						<Link to='/categories'>
-							<li>Categories</li>
+						<Link className='link' to='/categories'>
+							<li className='li'>Categories</li>
 						</Link>
 					</ul>
 				</nav>
@@ -31,17 +32,17 @@ const App = () => {
 				<Route path='/' exact component={Home} />
 				<Route path='/random' component={Recipe} />
 				<Route path='/categories' component={Categories} />
-				<Route path='/category:id' render={(routerProps) => {
-					return (
-						<Category
-						match={routerProps.match} />
-					)
-				}} />
-				<Route path='/test' component={RecipeInfo}/>
+				<Route
+					path={`/category/:id`}
+					render={(routerProps) => {
+						return <Category match={routerProps.match} />;
+					}}
+				/>
+				<Route path='/test' component={RecipeInfo} />
 			</main>
-				{/* <footer>
+			{/* <footer>
 					{/* <Footer /> */}
-				{/* </footer> */}
+			{/* </footer> */}
 		</div>
 	);
 };

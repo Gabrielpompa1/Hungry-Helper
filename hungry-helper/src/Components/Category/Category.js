@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import './Category.css'
 
-const Category = () => {
+const Category = ({ match }) => {
 	const [listItem, setListItem] = useState('');
 	const apiKey = process.env.REACT_APP_STOCK_API_KEY;
-	const catListUrl = `https://www.themealdb.com/api/json/v1/${apiKey}/filter.php?c=Lamb`;
+	const catListUrl = `https://www.themealdb.com/api/json/v1/${apiKey}/filter.php?c=${match.params.id}`;
 
 	useEffect(() => {
+		console.log(match)
 		fetch(catListUrl)
 			.then((res) => res.json())
 			.then((resJson) => {
@@ -22,7 +24,7 @@ const Category = () => {
 	}
 
 	let list = listItem.map((item) => {
-		return <li key={item.idMeal}>{item.strMeal}</li>;
+		return <li className='list-items' key={item.idMeal}>{item.strMeal}</li>;
 	});
 	return (
 		<div>

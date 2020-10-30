@@ -3,7 +3,7 @@ import { Route, Link } from 'react-router-dom';
 
 import './Categories.css';
 
-const Categories = ({ match }) => {
+const Categories = () => {
 	const [category, setCategory] = useState('');
 
 	const apiKey = process.env.REACT_APP_STOCK_API_KEY;
@@ -15,20 +15,25 @@ const Categories = ({ match }) => {
 			.then((res) => res.json())
 			.then((resJson) => {
 				setCategory(resJson.categories);
-				console.log(category);
 			})
 			.catch((error) => {
 				console.error(error);
 			});
 	}, []);
 
+	console.log(category);
 	if (!category) {
 		return null;
 	}
 	let catList = category.map((item) => {
 		return (
-			<Link to={`/category${item.idCategory}`}>
-				<li key={item.idCategory}>{item.strCategory}</li>
+			<Link
+				key={item.idCategory}
+				className='link'
+				to={`/category/${item.strCategory}`}>
+				<li key={item.idCategory} className='cat-items'>
+					{item.strCategory}
+				</li>
 			</Link>
 		);
 	});
