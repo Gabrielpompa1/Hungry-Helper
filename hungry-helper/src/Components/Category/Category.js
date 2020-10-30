@@ -22,10 +22,11 @@ const Category = () => {
 	}
 
 	let list = listItem.map((item) => {
-    return <li key={item.idMeal}>{item.strMeal}</li>;
+		return <li key={item.idMeal}>{item.strMeal}</li>;
 	});
 	return (
 		<div>
+            <h2>Pick a recipe!</h2>
 			<ul>{list}</ul>
 		</div>
 	);

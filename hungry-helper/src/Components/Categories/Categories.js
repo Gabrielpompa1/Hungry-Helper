@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Category from '../Category/Category'
+import { Route, Link } from 'react-router-dom';
 
-const Categories = () => {
+import './Categories.css';
+
+const Categories = ({ match }) => {
 	const [category, setCategory] = useState('');
 
 	const apiKey = process.env.REACT_APP_STOCK_API_KEY;
@@ -12,8 +14,8 @@ const Categories = () => {
 		fetch(catUrl)
 			.then((res) => res.json())
 			.then((resJson) => {
-                setCategory(resJson.categories);
-                console.log(category)
+				setCategory(resJson.categories);
+				console.log(category);
 			})
 			.catch((error) => {
 				console.error(error);
@@ -22,17 +24,18 @@ const Categories = () => {
 
 	if (!category) {
 		return null;
-    }
-    let catList = category.map((item) => {
-        return (
-            <li key={item.idCategory}>{item.strCategory}</li>
-        )
-    })
+	}
+	let catList = category.map((item) => {
+		return (
+			<Link to={`/category${item.idCategory}`}>
+				<li key={item.idCategory}>{item.strCategory}</li>
+			</Link>
+		);
+	});
 	return (
-		<div>
+		<div className='categories-div'>
 			<h2>Choose a category to get started!</h2>
-            <ul>{catList}</ul>
-            <Category />
+			<ul>{catList}</ul>
 		</div>
 	);
 };
