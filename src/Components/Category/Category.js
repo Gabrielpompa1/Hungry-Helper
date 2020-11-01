@@ -26,16 +26,20 @@ const Category = ({ match }) => {
 	let list = listItem.map((item) => {
 		return (
 			<Link key={item.idMeal} to={`/recipe/${item.idMeal}`}>
-				<li className='list-items' key={item.idMeal}>
-					{item.strMeal}
-				</li>
+				<div className='list-item-div'>
+					<li className='list-item' key={item.idMeal}>
+						{item.strMeal}
+					</li>
+				</div>
 			</Link>
 		);
 	});
 	return (
-		<div>
-			<h2>Pick a recipe!</h2>
-			<ul>{list}</ul>
+		<div className='category-container'>
+			<div className='category-div'>
+				<h2 className='category-title'>Pick a recipe!</h2>
+				<ul>{list}</ul>
+			</div>
 		</div>
 	);
 };

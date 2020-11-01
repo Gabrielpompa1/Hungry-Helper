@@ -1,5 +1,27 @@
-.list-items {
+.list-item {
     text-decoration: none;
+    font-weight: bold;
     color: black;
     padding: 10px;
+}
+
+.list-item:hover {
+    color: blue;
+}
+
+.category-title {
+    border-bottom: 2px solid black;
+    font-size: 28px;
+    text-align: center;
+    padding: 10px;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.category-div {
+    width: 250px;
 }

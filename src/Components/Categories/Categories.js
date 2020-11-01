@@ -38,9 +38,13 @@ const Categories = () => {
 		);
 	});
 	return (
-		<div className='categories-div'>
-			<h2>Choose a category to get started!</h2>
-			<ul>{catList}</ul>
+		<div className='categories-container'>
+			<div className='categories-div'>
+				<div className='categories-title'>
+					<h2>Choose a category!</h2>
+				</div>
+				<ul>{catList}</ul>
+			</div>
 		</div>
 	);
 };

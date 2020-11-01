@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 .header {
     padding: 12px;
     background-color: antiquewhite;
@@ -8,9 +10,10 @@
 
 .title {
     text-align: justify;
+    font-family: 'Fredoka One', cursive;
     text-shadow: -2px 3px black;
     width: 60px;
-    font-size: 53px;
+    font-size: 65px;
     font-weight: 800;
     color: white;
 }
@@ -32,6 +35,10 @@ header li {
     font-size: 16px;
     text-decoration: none;
     list-style: none;
+}
+
+header li:hover {
+    color: rgb(208, 208, 208);
 }
 
 body {

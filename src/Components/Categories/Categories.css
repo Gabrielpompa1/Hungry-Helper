@@ -1,8 +1,27 @@
-.cat-items {
-    padding: 8px;
-    color: black;
+.link {
+	text-decoration: none;
 }
 
-.link {
-    text-decoration: none;
+.categories-container {
+    margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	width: 220px;
+}
+
+.categories-title {
+    text-align: center;
+	border-bottom: 2px solid black;
+}
+
+.cat-items {
+    text-align: center;
+    margin-right: 20%;
+	padding: 8px;
+	font-weight: bold;
+	color: black;
+}
+
+.cat-items:hover {
+    color: blue;
 }
