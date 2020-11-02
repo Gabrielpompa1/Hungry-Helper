@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './Recipe.css';
 
 const Recipe = () => {
@@ -17,7 +16,7 @@ const Recipe = () => {
 			.then((res) => res.json())
 			.then((resJson) => {
 				setRecipe(resJson.meals[0]);
-				console.log(recipe);
+
 			})
 			.catch((error) => {
 				console.error(error);

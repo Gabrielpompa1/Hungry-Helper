@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './Categories.css';
 
@@ -21,7 +21,6 @@ const Categories = () => {
 			});
 	}, []);
 
-	console.log(category);
 	if (!category) {
 		return null;
 	}

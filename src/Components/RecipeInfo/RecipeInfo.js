@@ -12,7 +12,7 @@ const RecipeInfo = ({ match }) => {
 			.then((res) => res.json())
 			.then((resJson) => {
 				setSpecRecipe(resJson.meals[0]);
-				console.log(resJson);
+
 			})
 			.catch((error) => {
 				console.error(error);

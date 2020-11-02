@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { Route, Link } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import Header from './Components/Header/Header';
@@ -6,7 +5,7 @@ import Recipe from './Components/Recipe/Recipe';
 import Categories from './Components/Categories/Categories';
 import Category from './Components/Category/Category';
 import RecipeInfo from './Components/RecipeInfo/RecipeInfo';
-import Footer from './Components/Footer/Footer';
+// import Footer from './Components/Footer/Footer';
 import './App.css';
 
 const App = () => {

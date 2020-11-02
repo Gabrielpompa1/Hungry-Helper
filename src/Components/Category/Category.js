@@ -12,7 +12,6 @@ const Category = ({ match }) => {
 			.then((res) => res.json())
 			.then((resJson) => {
 				setListItem(resJson.meals);
-				console.log(listItem);
 			})
 			.catch((error) => {
 				console.error(error);

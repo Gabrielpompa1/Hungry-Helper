@@ -3,6 +3,9 @@
 ## Project Description
 - Hungry Helper, is designed to provide users with numerous cooking recipes by allowing them to search for recipes based on categories, area, ingredients, etc. Users can also find random recipes if they feel like trying something new!
 
+### Screenshot from the random section of the app
+
+![App example](src/images/app-example.png)
 
 ## User Stories
 - As a user, I would like to be able to search for recipes, so that I am in control of what I look for.
@@ -22,3 +25,20 @@
 ## Heirarchy
 
 ![Component Heirarchy](src/images/heirarchy.png)
+
+ ## MVP Goals
+- Allow users to find recipes based on categories.
+- Display ingredients and instructions in an effective way.
+- Create the random recipe function
+
+## Stretch Goals
+- Make the website stylish
+- Allow users to search recipes in a search bar.
+- Add sharing functionality to each recipe.
+- Allow users to submit their own recipes for inclusion.
+- Allow users to keep track of recipes they have completed.
+
+## Technologies Used
+- HTML5
+- CSS3
+- React Library
