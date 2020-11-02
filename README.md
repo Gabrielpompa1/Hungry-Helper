@@ -38,7 +38,20 @@
 - Allow users to submit their own recipes for inclusion.
 - Allow users to keep track of recipes they have completed.
 
+## Installation Instructions
+- Go to the Github repo https://github.com/Gabrielpompa1/Hungry-Helper
+- Fork the Repository
+- Clone your repository using the CLI
+
+## Contribution Guidelines
+- If you would like to contribute to this project, go to the Github repo https://github.com/Gabrielpompa1/Hungry-Helper.
+- Once here, make a pull request comparing your version to the main.
+- If accepted, your contribution will be complete.
+
 ## Technologies Used
 - HTML5
 - CSS3
 - React Library
+
+## Attributions
+- 'Wood Plank' - Pixabay

@@ -8,20 +8,18 @@ const Recipe = () => {
 	// Random Recipe
 	const url = `https://www.themealdb.com/api/json/v1/${apiKey}/random.php`;
 
-	// Search recipe by letter
-	// const url = `https://www.themealdb.com/api/json/v1/${apiKey}/search.php?f=c`;
-
+	
 	useEffect(() => {
 		fetch(url)
-			.then((res) => res.json())
-			.then((resJson) => {
-				setRecipe(resJson.meals[0]);
-
-			})
+		.then((res) => res.json())
+		.then((resJson) => {
+			setRecipe(resJson.meals[0]);
+		})
 			.catch((error) => {
-				console.error(error);
+				console.error(error)
 			});
 	}, []);
+
 
 	return (
 		<div className='container'>
@@ -38,7 +36,7 @@ const Recipe = () => {
 						id='recipe-image'
 						src={recipe.strMealThumb}
 						alt={recipe.strMeal}
-					/>
+						/>
 				</div>
 				{/* End of Image */}
 

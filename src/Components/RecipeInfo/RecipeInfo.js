@@ -7,7 +7,6 @@ const RecipeInfo = ({ match }) => {
 	const recUrl = `https://www.themealdb.com/api/json/v1/${apiKey}/lookup.php?i=${match.params.id}`;
 
 	useEffect(() => {
-		console.log(match)
 		fetch(recUrl)
 			.then((res) => res.json())
 			.then((resJson) => {
